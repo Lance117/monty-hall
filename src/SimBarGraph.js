@@ -13,9 +13,19 @@ export default class SimBarGraph extends Component {
 
     componentDidUpdate() {
         if (this.props.numTrials) {
-            // for (let i = 1; i <= this.props.numTrials; i++) {
-
-            // }
+            let stayWins = 0;
+            let chosenDoor;
+            let winningDoor;
+            let winRate;
+            for (let i = 1; i <= this.props.numTrials; i++) {
+                chosenDoor = Math.floor(Math.random() * 3);
+                winningDoor = Math.floor(Math.random() * 3);
+                if (winningDoor === chosenDoor) {
+                    stayWins += 1;
+                }
+                winRate = Math.floor((stayWins / i) * 100);
+                this.updateData(this.chartReference, winRate)
+            }
         }
     }
 
@@ -50,6 +60,7 @@ export default class SimBarGraph extends Component {
 
     updateData = (chart, stayWinRate) => {
         chart.props.data.datasets[0].data = [stayWinRate, 100 - stayWinRate]; 
+        chart.props.data.datasets[1].data = [100 - stayWinRate, stayWinRate]; 
         chart.chartInstance.update();
     }
     //-----------------

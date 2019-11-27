@@ -5,16 +5,35 @@ import SimBarGraph from './SimBarGraph'
 import './App.css';
 
 class Door extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpened: false
+    }
+  }
+
+  handleClick = () => {
+    this.setState({isOpened: this.state.isOpened ? false : true});
+  }
+
   render() {
+    let doorname = "door";
+    if (this.state.isOpened) {
+      doorname = "door door-open";
+    }
+
     return (
-      <div className="door">
-        <img src="https://www.pnglot.com/pngfile/detail/172-1721328_tardis-door-opening-gif.png" alt="tardis-door" onClick={() => console.log("I'm a door!")}></img>
+      <div className="backdoor">
+        <div className={doorname}>
+          <img src="https://www.pnglot.com/pngfile/detail/172-1721328_tardis-door-opening-gif.png" alt="tardis-door" onClick={this.handleClick}></img>
+        </div>
       </div>
     );
   }
 }
 
 class MontyGame extends React.Component {
+
   renderDoor(i) {
     return <Door />;
   }
