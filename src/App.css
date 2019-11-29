@@ -14,14 +14,16 @@
 .doors {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 15px;
 }
 
 .backdoor {
-  background-color: #333;
+  background-image: url("https://m.media-amazon.com/images/M/MV5BMTczMzEzOTg3NF5BMl5BanBnXkFtZTgwOTc4NDQ2NDE@._V1_UY268_CR87,0,182,268_AL_.jpg");
   position: relative;
   height: 232px;
   width: 175px;
+  margin-right: 15px;
 }
 
 .door {
@@ -51,4 +53,10 @@ img {
   width: 100%;
   height: 3.5rem;
   background-color: #e8e8e8;
+}
+
+.selected {
+  /* opacity: 0.5; */
+  border: 4px solid #2d9ee0;
+  border-radius: 5px;
 }

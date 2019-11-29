@@ -29,10 +29,6 @@ export default class SimBarGraph extends Component {
         }
     }
 
-    componentDidMount() {
-        console.log(this.chartReference)
-    }
-
     // helper variables & functions
     data = {
         labels: ['Stay', 'Switch'],
