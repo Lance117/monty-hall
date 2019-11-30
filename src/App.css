@@ -23,7 +23,15 @@
   position: relative;
   height: 232px;
   width: 175px;
-  margin-right: 15px;
+  margin-right: 58px;
+}
+
+.winning-door {
+  background-image: url("https://i.imgur.com/bAZPw4i.jpg");
+  position: relative;
+  height: 232px;
+  width: 175px;
+  margin-right: 58px;
 }
 
 .door {
@@ -36,6 +44,7 @@
 .door-open {
   transform: perspective(1200px) translateZ(0px)
   translateX(0px) translateY(0px) rotateY(-105deg);
+  pointer-events: none;
 }
 
 img {
