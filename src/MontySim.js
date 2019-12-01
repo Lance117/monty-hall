@@ -19,7 +19,7 @@ class MontySim extends React.Component {
         const { selectedOption } = this.state;
         return (
             <div className="monty-sim">
-                <div style={{ width: "300px" }}>
+                <div style={{ width: "300px", marginLeft: "50px" }}>
                     <Select
                         value={selectedOption}
                         onChange={this.handleChange}
@@ -38,7 +38,7 @@ const options = [
     { value: 50, label: '50' },
     { value: 100, label: '100' },
     { value: 500, label: '500' },
-    { value: 1000, label: '1000' },
+    { value: 1000, label: '1,000' },
 ];
 //---------
 

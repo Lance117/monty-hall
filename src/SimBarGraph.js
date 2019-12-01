@@ -63,7 +63,7 @@ export default class SimBarGraph extends Component {
 
     render() {
         return (
-            <div style={{width: "500px"}}>
+            <div style={{width: "500px", textAlign: "center"}}>
                 <h2>Win Rate by Strategy</h2>
                 <HorizontalBar
                     ref={(reference) => this.chartReference = reference}

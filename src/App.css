@@ -3,6 +3,19 @@
   min-height: 100vh;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 70px;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #e8e8e8;
+}
+
 .monty-game {
   padding-bottom: 3.5rem;
 }
@@ -65,7 +78,52 @@ img {
 }
 
 .selected {
-  /* opacity: 0.5; */
   border: 4px solid #2d9ee0;
   border-radius: 5px;
 }
+
+.header-btn {
+  font-weight: 700;
+  outline: none;
+  letter-spacing: .8px;
+  padding: .75rem 1rem;
+  border: none;
+  background-color: #611f69 !important;
+  color: #fff !important;
+  background: 0 0;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.about-modal {
+  background: white;
+  outline: none;
+  left: 5px;
+  top: 75px;
+  padding: 5px;
+  font-size: 15px;
+  line-height: 1.46668;
+  font-weight: 400;
+  transform: scale(1);
+  overflow: auto;
+  height: auto;
+  max-width: 360px;
+  border-radius: 8px;
+  position: relative;
+  --saf-0: rgba(var(--sk_foreground_low,29,28,29),0.13);
+  box-shadow: 0 0 0 1px var(--saf-0),0 18px 48px 0 rgba(0,0,0,.35);
+}
+
+.overlay {
+  z-index: 1053;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: 1s ease 0s 1 normal forwards popover-fade;
+  animation-duration: 80ms;
+  }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import Keyboard, { Cursor } from 'react-mk'
 
 class MontyGame extends React.Component {
@@ -71,6 +72,7 @@ class MontyGame extends React.Component {
 
         return (
             <div className="monty-game">
+                <Header />
                 <div className="doors">
                     {this.renderDoor(1)}
                     {this.renderDoor(2)}
@@ -80,7 +82,7 @@ class MontyGame extends React.Component {
                     <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{status}</Keyboard>
                     <Cursor blinkAnimationDuration={1000}></Cursor><br/>
                     {this.state.revealed && <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{revealedStatus}</Keyboard>}
-                    {this.state.finished && <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{finishedMsg}</Keyboard>}
+                    {this.state.finished && <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{finishedMsg}</Keyboard>}<br/>
                     {this.state.finished && <button onClick={this.handleSubmit}>Reset</button>}
                 </div>
             </div>
