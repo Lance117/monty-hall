@@ -43,6 +43,14 @@ header {
   margin-right: 58px;
 }
 
+.init-door {
+  background-color: #333;
+  position: relative;
+  height: 232px;
+  width: 175px;
+  margin-right: 58px;
+}
+
 .door {
   width: 175px;
   position: absolute;

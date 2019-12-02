@@ -112,10 +112,13 @@ class Door extends React.Component {
 
     render() {
         let doorname = "door";
-        let revealClass = "backdoor";
-        if (this.props.isOpened) doorname = "door door-open";
+        let revealClass = "init-door";
+        if (this.props.isOpened){
+            doorname = "door door-open";
+            revealClass = "backdoor";
+            if (this.props.isWinner) revealClass = "winning-door";
+        }
         if (this.props.isSelected) doorname = doorname.concat(' selected');
-        if (this.props.isWinner) revealClass = "winning-door";
 
         return (
             <div className={revealClass}>

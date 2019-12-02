@@ -86,13 +86,13 @@ class Header extends React.Component {
                                 <th>Switch</th>
                                 <th>{switchWins}</th>
                                 <th>{switchLosses}</th>
-                                <th>{`${(switchWins / (switchLosses + switchWins)).toFixed(4) * 100}%`}</th>
+                                <th>{`${((switchWins / (switchLosses + switchWins)) * 100).toFixed(2)}%`}</th>
                             </tr>
                             <tr>
                                 <th>Stay</th>
                                 <th>{stayWins}</th>
                                 <th>{stayLosses}</th>
-                                <th>{`${(stayWins / (stayWins + stayLosses)).toFixed(4) * 100}%`}</th>
+                                <th>{`${((stayWins / (stayWins + stayLosses)) * 100).toFixed(2)}%`}</th>
                             </tr>
                         </tbody>
                     </table>
