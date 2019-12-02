@@ -12,6 +12,10 @@ class MontyGame extends React.Component {
             finished: false,
             winner: Math.ceil(Math.random() * 3)
         }
+        this.stayWins = parseInt(window.localStorage.getItem('stayWins')) || 0;
+        this.stayLosses = parseInt(window.localStorage.getItem('stayLosses')) || 0;
+        this.switchWins = parseInt(window.localStorage.getItem('switchWins')) || 0;
+        this.switchLosses = parseInt(window.localStorage.getItem('switchLosses')) || 0;
     }
 
     handleClick = (i) => {
@@ -64,8 +68,22 @@ class MontyGame extends React.Component {
             status = '';
             if (this.state.winner === this.state.selected) {
                 finishedMsg = "Congrats, you've chosen the winning door! "
+                if (this.state.switched) {
+                    this.switchWins += 1;
+                    window.localStorage.setItem('switchWins', this.switchWins);
+                } else {
+                    this.stayWins += 1;
+                    window.localStorage.setItem('stayWins', this.stayWins);
+                }
             } else {
                 finishedMsg = `Sorry, the prize was behind door #${this.state.winner}. `
+                if (this.state.switched) {
+                    this.switchLosses += 1;
+                    window.localStorage.setItem('switchLosses', this.switchLosses);
+                } else {
+                    this.stayLosses += 1;
+                    window.localStorage.setItem('stayLosses', this.stayLosses);
+                }
             }
             finishedMsg = finishedMsg.concat('Click "reset" to try again. ')
         }
@@ -81,8 +99,8 @@ class MontyGame extends React.Component {
                 <div className="status" style={{ marginTop: "17px" }}>
                     <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{status}</Keyboard>
                     <Cursor blinkAnimationDuration={1000}></Cursor><br/>
-                    {this.state.revealed && <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{revealedStatus}</Keyboard>}
-                    {this.state.finished && <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{finishedMsg}</Keyboard>}<br/>
+                    {this.state.revealed && <Keyboard keyPressDelayRange={[30, 50]} sentenceDelayPerCharRange={[0, 0]}>{revealedStatus}</Keyboard>}
+                    {this.state.finished && <Keyboard keyPressDelayRange={[30, 50]} sentenceDelayPerCharRange={[0, 0]}>{finishedMsg}</Keyboard>}<br/>
                     {this.state.finished && <button onClick={this.handleSubmit}>Reset</button>}
                 </div>
             </div>

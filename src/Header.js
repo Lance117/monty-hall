@@ -31,9 +31,13 @@ class Header extends React.Component {
     }
 
     render() {
+        let switchWins = parseInt(window.localStorage.getItem('switchWins') || 0);
+        let switchLosses = parseInt(window.localStorage.getItem('switchLosses') || 0);
+        let stayWins = parseInt(window.localStorage.getItem('stayWins') || 0);
+        let stayLosses = parseInt(window.localStorage.getItem('stayLosses') || 0);
         return (
             <header>
-                <button onClick={this.handleOpenModal} className="header-btn">About</button>
+                <button onClick={this.handleOpenModal} className="header-btn">What Is This?</button>
                 <ReactModal
                     isOpen={this.state.showModal}
                     contentLabel="Test"
@@ -72,15 +76,15 @@ class Header extends React.Component {
                         <tbody>
                             <tr>
                                 <th>Switch</th>
-                                <th>3</th>
-                                <th>1</th>
-                                <th>75</th>
+                                <th>{switchWins}</th>
+                                <th>{switchLosses}</th>
+                                <th>{`${(switchWins / (switchLosses + switchWins)) * 100}%`}</th>
                             </tr>
                             <tr>
                                 <th>Stay</th>
-                                <th>3</th>
-                                <th>10</th>
-                                <th>30</th>
+                                <th>{stayWins}</th>
+                                <th>{stayLosses}</th>
+                                <th>{`${(stayWins / (stayWins + stayLosses)) * 100}%`}</th>
                             </tr>
                         </tbody>
                     </table>
