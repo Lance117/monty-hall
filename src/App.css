@@ -116,6 +116,25 @@ img {
   box-shadow: 0 0 0 1px var(--saf-0),0 18px 48px 0 rgba(0,0,0,.35);
 }
 
+.stats-modal {
+  background: white;
+  outline: none;
+  right: 5px;
+  top: 75px;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.46668;
+  font-weight: 400;
+  transform: scale(1);
+  overflow: auto;
+  height: auto;
+  width: 360px;
+  border-radius: 8px;
+  position: absolute;
+  --saf-0: rgba(var(--sk_foreground_low,29,28,29),0.13);
+  box-shadow: 0 0 0 1px var(--saf-0),0 18px 48px 0 rgba(0,0,0,.35);
+}
+
 .overlay {
   z-index: 1053;
   position: absolute;
@@ -126,4 +145,5 @@ img {
   overflow: hidden;
   animation: 1s ease 0s 1 normal forwards popover-fade;
   animation-duration: 80ms;
+  background-color: rgba(255, 255, 255, 0.75);
   }

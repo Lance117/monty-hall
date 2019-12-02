@@ -5,7 +5,8 @@ class Header extends React.Component {
     constructor() {
         super();
         this.state = {
-            showModal: false
+            showModal: false,
+            showStats: false,
         };
     }
 
@@ -17,8 +18,16 @@ class Header extends React.Component {
         this.setState({showModal: true});
     }
 
+    handleOpenStats = () => {
+        this.setState({showStats: true});
+    }
+
     handleCloseModal = () => {
         this.setState({showModal: false});
+    }
+
+    handleCloseStats = () => {
+        this.setState({showStats: false});
     }
 
     render() {
@@ -42,7 +51,40 @@ class Header extends React.Component {
                     </p>
                 </ReactModal>
                 <h2>Monty Hall Problem</h2>
-                <button className="header-btn">Your Stats</button>
+                <button onClick={this.handleOpenStats} className="header-btn">Your Stats</button>
+                <ReactModal
+                    isOpen={this.state.showStats}
+                    contentLabel="Stats"
+                    onRequestClose={this.handleCloseStats}
+                    shouldCloseOnOverlayClick={true}
+                    className="stats-modal"
+                    overlayClassName="overlay"
+                >
+                    <table style={{width: "100%"}}>
+                        <thead>
+                            <tr>
+                                <th>Strategy</th>
+                                <th># Wins</th>
+                                <th># Losses</th>
+                                <th>Win Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Switch</th>
+                                <th>3</th>
+                                <th>1</th>
+                                <th>75</th>
+                            </tr>
+                            <tr>
+                                <th>Stay</th>
+                                <th>3</th>
+                                <th>10</th>
+                                <th>30</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ReactModal>
             </header>
         )
     }
