@@ -47,11 +47,19 @@ class Header extends React.Component {
                     overlayClassName="overlay"
                 >
                     <p style={{margin: "10px"}}>
-                        The Monty Hall problem is an interesting stats puzzle named after the tv host of
-                        Let's Make a Deal. In this game, there are three doors: a car is behind one door
+                        The <b>Monty Hall Problem</b> is an interesting stats puzzle named after the tv host of 
+                        <a href="https://en.wikipedia.org/wiki/Let%27s_Make_a_Deal#The_Monty_Hall_Problem"> Let's Make A Deal</a>. In this game, there are three doors: a car is behind one door
                         and goats are behind the other two doors. After the contestant chooses a door,
                         the host reveals one door with a goat. Now there are two doors, two choices:
-                        do you stay with your choice or switch?
+                        do you stay with your choice or switch? Does it even matter?
+                    </p>
+                    <p style={{margin: "10px"}}>
+                        Do you think that the odds are now 50-50 because there are now two doors instead of three?
+                        That idea seems to make sense, but is incorrect! Brief explanation: the odds of choosing
+                        the winning door are 1/3, so the odds of that door losing are 2/3. Even though one door is opened,
+                        the odds of initially choosing the winning door don't change. Therefore, switching
+                        gives you the best odds of winning. Try running the simulator a bunch of times and you'll
+                        notice that the win rate of keeping your door hovers around 33%.
                     </p>
                 </ReactModal>
                 <h2>Monty Hall Problem</h2>
@@ -78,13 +86,13 @@ class Header extends React.Component {
                                 <th>Switch</th>
                                 <th>{switchWins}</th>
                                 <th>{switchLosses}</th>
-                                <th>{`${(switchWins / (switchLosses + switchWins)) * 100}%`}</th>
+                                <th>{`${(switchWins / (switchLosses + switchWins)).toFixed(4) * 100}%`}</th>
                             </tr>
                             <tr>
                                 <th>Stay</th>
                                 <th>{stayWins}</th>
                                 <th>{stayLosses}</th>
-                                <th>{`${(stayWins / (stayWins + stayLosses)) * 100}%`}</th>
+                                <th>{`${(stayWins / (stayWins + stayLosses)).toFixed(4) * 100}%`}</th>
                             </tr>
                         </tbody>
                     </table>

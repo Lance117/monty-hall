@@ -36,9 +36,9 @@ export default class SimBarGraph extends Component {
             {
                 label: 'Win %',
                 backgroundColor: 'rgba(122,200,0,0.6)',
-                borderColor: 'rgba(255,99,132,1)',
+                borderColor: 'green',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                hoverBackgroundColor: 'rgba(122,200,0,0.4)',
                 hoverBorderColor: 'rgba(255,99,132,1)',
                 data: [50, 50]
             },
@@ -47,7 +47,7 @@ export default class SimBarGraph extends Component {
                 backgroundColor: 'rgba(242,97,48,0.6)',
                 borderColor: 'rgba(255,99,132,1)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                hoverBackgroundColor: 'rgba(242,97,48,0.4)',
                 hoverBorderColor: 'rgba(255,99,132,1)',
                 data: [50, 50]
             }

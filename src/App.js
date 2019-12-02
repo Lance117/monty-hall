@@ -7,7 +7,6 @@ const App = () => (
   <div className="app">
     <MontyGame />
     <MontySim />
-    <footer className="main-footer">Hello world</footer>
   </div>
 )
 

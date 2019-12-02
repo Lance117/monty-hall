@@ -97,7 +97,7 @@ class MontyGame extends React.Component {
                     {this.renderDoor(3)}
                 </div>
                 <div className="status" style={{ marginTop: "17px" }}>
-                    <Keyboard keyPressDelayRange={[40, 80]} sentenceDelayPerCharRange={[0, 0]}>{status}</Keyboard>
+                    {!this.state.finished && <Keyboard keyPressDelayRange={[30, 50]} sentenceDelayPerCharRange={[0, 0]}>{status}</Keyboard>}
                     <Cursor blinkAnimationDuration={1000}></Cursor><br/>
                     {this.state.revealed && <Keyboard keyPressDelayRange={[30, 50]} sentenceDelayPerCharRange={[0, 0]}>{revealedStatus}</Keyboard>}
                     {this.state.finished && <Keyboard keyPressDelayRange={[30, 50]} sentenceDelayPerCharRange={[0, 0]}>{finishedMsg}</Keyboard>}<br/>
