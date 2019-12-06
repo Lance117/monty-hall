@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/monty-hall/static/css/main.92e8c519.chunk.css",
+    "main.js": "/monty-hall/static/js/main.efa04c68.chunk.js",
+    "main.js.map": "/monty-hall/static/js/main.efa04c68.chunk.js.map",
+    "runtime-main.js": "/monty-hall/static/js/runtime-main.941a379b.js",
+    "runtime-main.js.map": "/monty-hall/static/js/runtime-main.941a379b.js.map",
+    "static/js/2.ab5ad0a5.chunk.js": "/monty-hall/static/js/2.ab5ad0a5.chunk.js",
+    "static/js/2.ab5ad0a5.chunk.js.map": "/monty-hall/static/js/2.ab5ad0a5.chunk.js.map",
+    "index.html": "/monty-hall/index.html",
+    "precache-manifest.360cd5bdc0b51f85600c5e1e972ab7e7.js": "/monty-hall/precache-manifest.360cd5bdc0b51f85600c5e1e972ab7e7.js",
+    "service-worker.js": "/monty-hall/service-worker.js",
+    "static/css/main.92e8c519.chunk.css.map": "/monty-hall/static/css/main.92e8c519.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.941a379b.js",
+    "static/js/2.ab5ad0a5.chunk.js",
+    "static/css/main.92e8c519.chunk.css",
+    "static/js/main.efa04c68.chunk.js"
+  ]
+}
