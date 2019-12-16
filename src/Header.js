@@ -35,6 +35,12 @@ class Header extends React.Component {
         let switchLosses = parseInt(window.localStorage.getItem('switchLosses') || 0);
         let stayWins = parseInt(window.localStorage.getItem('stayWins') || 0);
         let stayLosses = parseInt(window.localStorage.getItem('stayLosses') || 0);
+
+        let stayWinRate = `${((stayWins / (stayWins + stayLosses)) * 100).toFixed(2)}%`;
+        if (stayWins + stayLosses === 0) stayWinRate = 'no rounds played'
+        let switchWinRate = `${((switchWins / (switchWins + switchLosses)) * 100).toFixed(2)}%`;
+        if (switchWins + switchLosses === 0) switchWinRate = 'no rounds played'
+
         return (
             <header>
                 <button onClick={this.handleOpenModal} className="header-btn">What Is This?</button>
@@ -86,13 +92,13 @@ class Header extends React.Component {
                                 <th>Switch</th>
                                 <th>{switchWins}</th>
                                 <th>{switchLosses}</th>
-                                <th>{`${((switchWins / (switchLosses + switchWins)) * 100).toFixed(2)}%`}</th>
+                                <th>{switchWinRate}</th>
                             </tr>
                             <tr>
                                 <th>Stay</th>
                                 <th>{stayWins}</th>
                                 <th>{stayLosses}</th>
-                                <th>{`${((stayWins / (stayWins + stayLosses)) * 100).toFixed(2)}%`}</th>
+                                <th>{stayWinRate}</th>
                             </tr>
                         </tbody>
                     </table>
