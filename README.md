@@ -9,11 +9,9 @@ the winning door are 1/3, so the odds of that door losing are 2/3. Even though o
 the odds of initially choosing the winning door don't change. Therefore, switching
 gives you the best odds of winning.
 
+<img src="https://upload.wikimedia.org/wikipedia/en/b/be/Probability_diagram_for_Monty_Hall_problem.gif">
+
 ## Language and Libraries
 - [JavaScript](https://www.javascript.com/)
 - [React](https://reactjs.org/)
 - [chart.js](https://www.chartjs.org/)
-
-## Todos
-- Add another chart (maybe a scatter or line chart for wins)
-- Fix issue in game (the images behind the door load before the door)
