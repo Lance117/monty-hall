@@ -54,7 +54,8 @@ class Header extends React.Component {
                 >
                     <p style={{margin: "10px"}}>
                         The <b>Monty Hall Problem</b> is an interesting stats puzzle named after the tv host of 
-                        <a href="https://en.wikipedia.org/wiki/Let%27s_Make_a_Deal#The_Monty_Hall_Problem"> Let's Make A Deal</a>. In this game, there are three doors: a car is behind one door
+                        <a href="https://en.wikipedia.org/wiki/Let%27s_Make_a_Deal#The_Monty_Hall_Problem"> Let's Make A Deal</a>.
+                        In this game, there are three doors: the prize is behind one door
                         and goats are behind the other two doors. After the contestant chooses a door,
                         the host reveals one door with a goat. Now there are two doors, two choices:
                         do you stay with your choice or switch? Does it even matter?

@@ -19,12 +19,12 @@ class MontySim extends React.Component {
         const { selectedOption } = this.state;
         return (
             <div className="monty-sim">
-                <div style={{ width: "300px", marginLeft: "50px" }}>
+                <div style={{ width: "338px", marginLeft: "100px" }}>
                     <Select
                         value={selectedOption}
                         onChange={this.handleChange}
                         options={options}
-                        placeholder="Welcome to simulator! Please choose N rounds:"
+                        placeholder="Welcome to simulator! Choose N rounds:"
                     />
                 </div>
                 <SimBarGraph numTrials={this.state.numTrials} />

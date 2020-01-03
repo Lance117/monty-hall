@@ -8,7 +8,7 @@ const App = () => (
     <MontyGame />
     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
       <MontySim />
-      <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Probability_diagram_for_Monty_Hall_problem.gif"></img>
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Probability_diagram_for_Monty_Hall_problem.gif" alt="prob-diagram"></img>
     </div>
   </div>
 )
