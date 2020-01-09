@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://lancesanity.github.io/monty-hall",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "chart.js": "^2.9.3",
     "express": "^4.17.1",
     "react": "^16.12.0",

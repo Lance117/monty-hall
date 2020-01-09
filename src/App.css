@@ -151,3 +151,25 @@ img {
   animation-duration: 80ms;
   background-color: rgba(255, 255, 255, 0.75);
   }
+
+  .slidein {
+    bottom: 0;
+    background-color: #fff;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.15);
+    display: block;
+    left: auto;
+    margin: 0;
+    position: fixed;
+    right: 30px;
+    transition: bottom 750ms ease;
+    width: 350px;
+    z-index: 200;
+  }
+
+  .slidein-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+  }
