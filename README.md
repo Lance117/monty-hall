@@ -3,7 +3,7 @@ This app is a Monty Hall game and simulator. Demo: https://lancesanity.github.io
 
 The **Monty Hall problem** is an interesting stats puzzle named after the tv host of [Let's Make a Deal](https://en.wikipedia.org/wiki/Let%27s_Make_a_Deal#The_Monty_Hall_Problem). In this game, there are three doors: a car is behind one door and goats are behind the other two doors. After the contestant chooses a door, the host reveals one door with a goat. Now there are two doors, two choices: do you stay with your choice or switch?
 
-<img src="https://media.giphy.com/media/WqdIn6O7jON4PrKBKR/giphy.gif" width="720">
+<img src="demo.gif">
 
 Do you think that the odds are now 50-50 because there are now two doors instead of three?
 That idea seems to make sense, but is incorrect! Brief explanation: the odds of choosing
