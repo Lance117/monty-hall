@@ -24,7 +24,9 @@ const App = () => {
             <li>Switch doors or keep the same one.</li>
             <li>You've won or lost.</li>
           </ol>
-          There's also a simulator to help prove that switching doors is the best strategy. Try it out!
+          <p>
+            There's also a simulator to help prove that switching doors is the best strategy. Try it out!
+          </p>
           <button className="header-btn" onClick={() => setSlidein(false)}>Got It!</button>
         </section>
       </aside>}
