@@ -30,23 +30,23 @@ header {
 .backdoor {
   background-image: url("https://m.media-amazon.com/images/M/MV5BMTczMzEzOTg3NF5BMl5BanBnXkFtZTgwOTc4NDQ2NDE@._V1_UY268_CR87,0,182,268_AL_.jpg");
   position: relative;
-  height: 232px;
+  height: 270px;
   width: 175px;
   margin-right: 58px;
 }
 
 .winning-door {
-  background-image: url("https://i.imgur.com/bAZPw4i.jpg");
+  background-image: url("https://i.imgur.com/UAKC9WT.jpg");
   position: relative;
-  height: 232px;
+  height: 270px;
   width: 175px;
   margin-right: 58px;
 }
 
 .init-door {
-  background-color: #333;
+  background-color: white;
   position: relative;
-  height: 232px;
+  height: 271px;
   width: 175px;
   margin-right: 58px;
 }
@@ -65,7 +65,7 @@ header {
 }
 
 img {
-  max-width: 100%;
+  height: 270px;
 }
 
 .status {

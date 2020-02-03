@@ -123,7 +123,7 @@ class Door extends React.Component {
         return (
             <div className={revealClass}>
                 <div className={doorname}>
-                    <img src="https://www.pnglot.com/pngfile/detail/172-1721328_tardis-door-opening-gif.png" alt="tardis-door" onClick={() => this.props.onClick()}></img>
+                    <img src="https://raw.githubusercontent.com/LanceSanity/monty-hall/master/images/tardis.png" alt="tardis-door" onClick={() => this.props.onClick()}></img>
                 </div>
             </div>
         );
